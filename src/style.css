@@ -423,7 +423,7 @@ footer p {
 /* desktop only */
 @media (min-width: 992px) {
   .collapse.show {
-    display: flex !important;
+    display: block !important;
   }
 }
 

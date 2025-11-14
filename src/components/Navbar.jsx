@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../style.css";
 
 const Navbar = () => {
+  const navRef = useRef();
+
+  // فتح/غلق المنيو بالزرار
+  const toggleMenu = () => {
+    navRef.current.classList.toggle("show");
+  };
+
+  // قفل المنيو عند الضغط على أي لينك
+  const closeMenu = () => {
+    if (window.innerWidth < 992) {
+      navRef.current.classList.remove("show");
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm">
       <div className="container">
@@ -15,47 +29,49 @@ const Navbar = () => {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          onClick={toggleMenu}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Menu */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto text-center">
-            <li className="nav-item">
-              <a className="nav-link" href="#home" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        {/* Links */}
+        <div
+          className="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+          ref={navRef}
+        >
+          <ul className="navbar-nav text-center">
+
+            <li className="nav-item mx-3">
+              <a className="nav-link" href="#home" onClick={closeMenu}>
                 Home
               </a>
             </li>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <li className="nav-item mx-3">
+              <a className="nav-link" href="#about" onClick={closeMenu}>
                 About
               </a>
             </li>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#skills-tech" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <li className="nav-item mx-3">
+              <a className="nav-link" href="#skills-tech" onClick={closeMenu}>
                 Skills
               </a>
             </li>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#projects" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <li className="nav-item mx-3">
+              <a className="nav-link" href="#projects" onClick={closeMenu}>
                 Projects
               </a>
             </li>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#contact" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <li className="nav-item mx-3">
+              <a className="nav-link" href="#contact" onClick={closeMenu}>
                 Contact
               </a>
             </li>
+
           </ul>
         </div>
 
@@ -65,3 +81,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
