@@ -1,6 +1,5 @@
 import React from "react";
 import "../style.css";
-import profile from "../assets/profile.jpg";
 import { FaDownload, FaEye, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
@@ -10,7 +9,7 @@ const Hero = () => {
 
         {/* Profile Image */}
         <img
-          src={profile}
+         src="./profile.jpg"
           alt="Moaz Wael"
           className="profile-img mb-4"
           data-aos="zoom-in"
