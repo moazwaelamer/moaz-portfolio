@@ -44,7 +44,7 @@ const Contact = () => {
                 <a href="https://github.com/moazwaelamer" target="_blank" rel="noreferrer">
                   <FaGithub />
                 </a>
-                <a href="https.linkedin.com/in/moaz-wael-4bb290377" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/moaz-wael-4bb290377" target="_blank" rel="noreferrer">
                   <FaLinkedin color="#0a66c2" />
                 </a>
                 <a href="https://www.facebook.com/share/1Yo4kAJVU5/?mibextid=wwXIfr" target="_blank" rel="noreferrer">

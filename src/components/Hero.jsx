@@ -49,7 +49,7 @@ const Hero = () => {
 
         {/* SOCIAL ICONS */}
         <div className="hero-socials mt-4" data-aos="fade-up" data-aos-delay="450">
-          <a href="https.linkedin.com/in/moaz-wael-4bb290377" target="_blank" className="hero-social-icon">
+          <a href="https://www.linkedin.com/in/moaz-wael-4bb290377" target="_blank" className="hero-social-icon">
             <FaLinkedin size={22} />
           </a>
 
