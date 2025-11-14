@@ -20,19 +20,33 @@
 /*      GLOBAL STYLE     */
 /* ===================== */
 
-html, body {
-  height: 100%;
+/* تمنع أي مساحة بيضا في الصفحة كلها */
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-body {
-  margin: 0;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica;
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.3s ease;
-  overflow-x: hidden !important;  /* الصح */
-  overflow-y: auto !important;     /* يخلي الصفحة تطلع وتنزل طبيعي */
+/* أي container في الموقع يبقى Full Width */
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
+
+/* أي Section يمتد لعرض الشاشة */
+section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 
 
 
@@ -344,7 +358,7 @@ footer p {
    Desktop layout defaults
 ======================= */
 .container {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }

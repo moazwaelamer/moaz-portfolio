@@ -5,7 +5,7 @@ import { FaDownload, FaEye, FaLinkedin, FaGithub, FaEnvelope } from "react-icons
 const Hero = () => {
   return (
     <section id="home" className="hero-section d-flex align-items-center">
-      <div className="container text-center">
+      <div className="container-fluid text-center hero-container">
 
         {/* Profile Image */}
         <img
@@ -21,7 +21,7 @@ const Hero = () => {
         </h1>
 
         <h4 className="mb-4" data-aos="fade-up" data-aos-delay="250">
-          Frontend Developer & React.js Enthusiast
+          Frontend Developer
         </h4>
 
         {/* Buttons */}
