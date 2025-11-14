@@ -349,42 +349,38 @@ footer p {
   padding: 0 15px;
 }
 /* ممنوع تخلي section عرضه 500px على الديسكتوب */
-section {
-  max-width: none;
-}
 
-/* اعمل كده فقط على الموبايل */
-@media (max-width: 768px) {
-  section {
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-  }
-}
 
-/* =======================
-/* Mobile Center */
+/* ======================= */
+/*   MOBILE CENTER FIX     */
+/* ======================= */
+
 @media (max-width: 768px) {
+
   body {
-     overflow-x: hidden !important;  /* الصح */
-  overflow-y: auto !important;  
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
   }
 
+  /* container padding على الموبايل */
   .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
+  /* Hero buttons full width */
   .hero-btn-primary,
   .hero-btn-outline {
     width: 100%;
     justify-content: center !important;
   }
 
+  /* Socials center */
   .hero-socials {
     justify-content: center !important;
   }
 
+  /* Experience layout */
   .exp-timeline { 
     border-left: none !important;
     padding-left: 0 !important;
@@ -406,26 +402,26 @@ section {
   }
 }
 
+/* ======================= */
+/*       NAVBAR FIX        */
+/* ======================= */
 
-/* NAVBAR FIXES */
+/* navbar items centered on mobile */
 @media (max-width: 768px) {
   .navbar-nav {
     justify-content: center;
   }
 }
 
-/* Toggler always clickable */
+/* toggler must be above collapse */
 .navbar-toggler {
-  z-index: 100;
+  z-index: 2000;
 }
 
-/* Keep ONLY this */
-.collapse.show {
-  display: block !important;
-}
 
-/* Desktop nav inline */
-@media (max-width: 768px) {
+
+/* desktop only */
+@media (min-width: 992px) {
   .collapse.show {
     display: flex !important;
   }

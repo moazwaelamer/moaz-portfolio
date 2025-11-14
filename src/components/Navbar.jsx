@@ -6,10 +6,12 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm">
       <div className="container">
 
+        {/* Logo */}
         <a className="navbar-brand fw-bold fs-4" href="#home">
           Moaz Wael
         </a>
 
+        {/* Toggler */}
         <button
           className="navbar-toggler"
           type="button"
@@ -22,13 +24,38 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul className="navbar-nav text-center">
-            <li className="nav-item mx-3"><a className="nav-link" href="#home">Home</a></li>
-            <li className="nav-item mx-3"><a className="nav-link" href="#about">About</a></li>
-            <li className="nav-item mx-3"><a className="nav-link" href="#skills-tech">Skills</a></li>
-            <li className="nav-item mx-3"><a className="nav-link" href="#projects">Projects</a></li>
-            <li className="nav-item mx-3"><a className="nav-link" href="#contact">Contact</a></li>
+        {/* Menu */}
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto text-center">
+            <li className="nav-item">
+              <a className="nav-link" href="#home" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                Home
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                About
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#skills-tech" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                Skills
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#projects" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                Projects
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#contact" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
